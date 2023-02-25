@@ -1,30 +1,12 @@
-import { TonConnectButton } from '@tonconnect/ui-react';
+import { TonConnectButton, useTonWallet } from '@tonconnect/ui-react';
 import React from 'react';
-import { AppContainer, StyledApp } from '../../App';
-import { Button, FlexBoxCol, FlexBoxRow } from '../../components/styled/styled';
-
-import { useTonClient } from '../../hooks/useTonClient';
+import JobList from '../../components/UI/JobList';
 
 const JobLists = () => {
-  const { client } = useTonClient();
-  alert(client);
-  return (
-    <StyledApp>
-      <AppContainer>
-        <FlexBoxCol>
-          <h1>123</h1>
-          <h1>123</h1>
-          <FlexBoxRow>
-            <TonConnectButton />
-            <h1>123</h1>
-            <h1>123</h1>
-            <h1>123</h1>
-          </FlexBoxRow>
-        </FlexBoxCol>
-        {/* <Button>123</Button> */}
-      </AppContainer>
-    </StyledApp>
-  );
+  //   const wallet = useTonWallet();
+
+  //   console.log(wallet);
+  return <JobList />;
 };
 
 export default JobLists;
