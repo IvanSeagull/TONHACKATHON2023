@@ -3,6 +3,7 @@ import { TonConnectUIProvider } from '@tonconnect/ui-react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
+import JobLists from './pages/JobLists';
 // this manifest is used temporarily for development purposes
 const manifestUrl =
   'https://raw.githubusercontent.com/ton-community/tutorials/main/03-client/test/public/tonconnect-manifest.json';
@@ -15,7 +16,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <TonConnectUIProvider manifestUrl={manifestUrl}>
     <QueryClientProvider client={queryClient}>
       {/* <App /> */}
-      <h1>123</h1>
+      <JobLists />
+      {/* <h1>123</h1> */}
     </QueryClientProvider>
   </TonConnectUIProvider>,
 );
