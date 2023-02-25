@@ -69,7 +69,7 @@ let githubUsername, githubRepo, botUsername;
         type: 'web_app',
         text: 'Launch Webapp',
         web_app: {
-          url: testUrl,
+          url: url,
         },
       },
     })
