@@ -1,12 +1,12 @@
 import { TonConnectButton } from '@tonconnect/ui-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
+// @ts-ignore
+const tg = window.Telegram?.WebApp;
 
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
-  // @ts-ignore
-  const tg = window.Telegram.WebApp;
   return (
     <div className={styles.wrapper}>
       <div>Logo</div>
