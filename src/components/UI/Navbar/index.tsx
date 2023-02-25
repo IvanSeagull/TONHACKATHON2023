@@ -2,7 +2,9 @@ import { TonConnectButton } from '@tonconnect/ui-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 // @ts-ignore
-const tg = window.Telegram?.WebApp;
+// const tg = window.Telegram?.WebApp;
+
+import WebApp from '@twa-dev/sdk';
 
 import styles from './Navbar.module.scss';
 
@@ -19,7 +21,7 @@ const Navbar = () => {
         </Link>
         <Link to="/profile">
           <p>profile</p>
-          <p>{tg.initDataUnsafe?.user?.username}</p>
+          <p>{WebApp.initDataUnsafe?.user?.username}</p>
         </Link>
       </div>
     </div>
