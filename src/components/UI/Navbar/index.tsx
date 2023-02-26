@@ -20,8 +20,8 @@ const Navbar = () => {
           <p>123</p>
         </Link>
         <Link to="/profile">
-          <p>profile</p>
-          <p>{WebApp.initDataUnsafe?.user?.id}</p>
+          <p>profile123</p>
+          <p>{WebApp.initDataUnsafe?.user?.photo_url}</p>
         </Link>
       </div>
     </div>
