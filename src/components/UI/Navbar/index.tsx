@@ -21,7 +21,7 @@ const Navbar = () => {
         </Link>
         <Link to="/profile">
           <p>profile</p>
-          <p>{WebApp.initDataUnsafe?.user?.username}</p>
+          <p>{WebApp.initDataUnsafe?.user?.id}</p>
         </Link>
       </div>
     </div>
