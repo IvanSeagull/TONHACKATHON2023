@@ -7,12 +7,16 @@ import { Link } from 'react-router-dom';
 import WebApp from '@twa-dev/sdk';
 
 import styles from './Navbar.module.scss';
+import AccountButton from './AccountButton';
 
 const Navbar = () => {
   return (
     <div className={styles.wrapper}>
-      <div>Logo</div>
-      <div className={styles.row}>
+      <div className={styles.createBtn}>
+        <p>Create a job</p>
+      </div>
+      <AccountButton />
+      {/* <div className={styles.row}>
         <Link to="/jobs">
           <p>jobs</p>
         </Link>
@@ -20,10 +24,10 @@ const Navbar = () => {
           <p>123</p>
         </Link>
         <Link to="/profile">
-          <p>profile123</p>
-          <p>{WebApp.initDataUnsafe?.user?.photo_url}</p>
-        </Link>
-      </div>
+          
+          {/* <p>{WebApp.initDataUnsafe?.user?.photo_url}</p> */}
+      {/* </Link> */}
+      {/* // </div> */}
     </div>
   );
 };

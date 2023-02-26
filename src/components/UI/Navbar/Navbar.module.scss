@@ -1,13 +1,24 @@
 .wrapper {
-  height: 50px;
+  height: 70px;
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: rgb(248, 121, 121);
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 16px;
+  -webkit-box-shadow: 0 10px 24px 1px #0000001a;
+  -moz-box-shadow: 0 10px 24px 1px #0000001a;
+  box-shadow: 0 10px 24px 1px #0000001a;
+
+  .createBtn {
+    background-color: #dcf3ff;
+    color: #0088cc;
+    padding: 10px 16px;
+    border-radius: 48px;
+  }
 }
 
 .row {

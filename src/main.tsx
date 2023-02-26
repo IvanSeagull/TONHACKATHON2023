@@ -15,7 +15,7 @@ const queryClient = new QueryClient({
 });
 
 export const StyledApp = styled.div`
-  background-color: #121213;
+  background-color: #fff;
   min-height: 100vh;
   width: 100%;
 `;
