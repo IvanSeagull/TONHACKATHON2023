@@ -7,14 +7,16 @@ import JobListItem from './JobListItem';
 const JobList = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.content}>
-        <FlexBoxCol>
-          <JobListItem />
-          <JobListItem />
-          <JobListItem />
+      <div className="container">
+        <div className={styles.content}>
+          <FlexBoxCol>
+            <JobListItem />
+            <JobListItem />
+            <JobListItem />
 
-          <JobListItem />
-        </FlexBoxCol>
+            <JobListItem />
+          </FlexBoxCol>
+        </div>
       </div>
     </div>
   );

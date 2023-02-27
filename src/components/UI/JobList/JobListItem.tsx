@@ -28,12 +28,12 @@ const JobListItem = () => {
         </div>
       </div>
 
-      <div className={styles.line} />
+      {/* <div className={styles.line} />
       <div className={styles.tagsCon}>
         {tags.map((tag, index) => (
           <SkillComponent key={index} value={tag} />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

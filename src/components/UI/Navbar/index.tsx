@@ -12,22 +12,27 @@ import AccountButton from './AccountButton';
 const Navbar = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.createBtn}>
-        <p>Create a job</p>
-      </div>
-      <AccountButton />
-      {/* <div className={styles.row}>
+      <div className="container">
+        <div className={styles.content}>
+          <div className={styles.createBtn}>
+            <p>Create a job</p>
+          </div>
+
+          <AccountButton />
+          {/* <div className={styles.row}>
         <Link to="/jobs">
-          <p>jobs</p>
+        <p>jobs</p>
         </Link>
         <Link to="/profile">
-          <p>123</p>
+        <p>123</p>
         </Link>
         <Link to="/profile">
-          
-          {/* <p>{WebApp.initDataUnsafe?.user?.photo_url}</p> */}
-      {/* </Link> */}
-      {/* // </div> */}
+        
+        {/* <p>{WebApp.initDataUnsafe?.user?.photo_url}</p> */}
+          {/* </Link> */}
+          {/* // </div> */}
+        </div>
+      </div>
     </div>
   );
 };

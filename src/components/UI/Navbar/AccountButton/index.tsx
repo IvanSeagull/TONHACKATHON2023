@@ -1,4 +1,5 @@
 import { Menu, Button, Text } from '@mantine/core';
+import React from 'react';
 import { useTonConnectUI } from '@tonconnect/ui-react';
 // import {
 //   IconSettings,
@@ -8,36 +9,56 @@ import { useTonConnectUI } from '@tonconnect/ui-react';
 //   IconTrash,
 //   IconArrowsLeftRight,
 // } from '@tabler/icons';
-
 import WebApp from '@twa-dev/sdk';
 import { Link } from 'react-router-dom';
-import { useTonClient } from '../../../../hooks/useTonClient';
 import { useTonConnect } from '../../../../hooks/useTonConnect';
 
+import { TonConnect, toUserFriendlyAddress } from '@tonconnect/sdk';
+
 function AccountButton() {
-  const network = useTonClient();
-  console.log(network);
+  const [tonConnectUI] = useTonConnectUI();
+  const { wallet, connected } = useTonConnect();
+  const [normalWallet, setNormalWallet] = React.useState('');
+
+  React.useEffect(() => {
+    if (wallet) {
+      setNormalWallet(toUserFriendlyAddress(wallet));
+    }
+  }, [wallet]);
+
+  console.log();
+
   return (
-    <Menu shadow="md" width={200}>
-      <Menu.Target>
-        <Button>EQDv...9WQ</Button>
-      </Menu.Target>
+    <>
+      {tonConnectUI.connected ? (
+        <Menu shadow="md" width={200}>
+          <Menu.Target>
+            <Button>
+              {normalWallet.slice(0, 4)}...{normalWallet.slice(-4)}
+            </Button>
+          </Menu.Target>
 
-      <Menu.Dropdown>
-        <Link to="/jobs">
-          <Menu.Item>job search</Menu.Item>
-        </Link>
+          <Menu.Dropdown>
+            <Link to="/jobs">
+              <Menu.Item>job search</Menu.Item>
+            </Link>
 
-        <Link to="/profile">
-          <Menu.Item>profile</Menu.Item>
-        </Link>
+            <Link to="/profile">
+              <Menu.Item>profile</Menu.Item>
+            </Link>
 
-        <Menu.Item>archive</Menu.Item>
+            <Menu.Item>archive</Menu.Item>
 
-        <Menu.Divider />
-        <Menu.Item color="red">Sign out</Menu.Item>
-      </Menu.Dropdown>
-    </Menu>
+            <Menu.Divider />
+            <Menu.Item onClick={() => tonConnectUI.disconnect()} color="red">
+              Sign out
+            </Menu.Item>
+          </Menu.Dropdown>
+        </Menu>
+      ) : (
+        <Button onClick={() => tonConnectUI.connectWallet()}>Connect wallet</Button>
+      )}
+    </>
   );
 }
 

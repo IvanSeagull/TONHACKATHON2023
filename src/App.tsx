@@ -25,7 +25,11 @@ function App() {
   // const wallet = useTonWallet()
 
   console.log(wallet, connected);
-  return <>{connected ? <Navigator /> : <AuthScreen />}</>;
+  return (
+    <>
+      <Navigator />
+    </>
+  );
 }
 
 export default App;
