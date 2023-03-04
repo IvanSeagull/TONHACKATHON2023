@@ -14,7 +14,7 @@ interface SecondStepProps {
 const SecondStep: React.FC<SecondStepProps> = ({ nextStep, prevStep }) => {
   return (
     <div>
-      <Selection />
+      <Selection title="Tags" />
       <div className={styles.buttonCon}>
         <SecondaryButton text="Back" onClick={prevStep} />
         <PrimaryButton text="Submit" onClick={nextStep} />

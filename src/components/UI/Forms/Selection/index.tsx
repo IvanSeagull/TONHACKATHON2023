@@ -21,11 +21,15 @@ const items = [
   'WHATEVER',
 ];
 
-const Selection = () => {
+interface SelectionProps {
+  title: string;
+}
+
+const Selection: React.FC<SelectionProps> = ({ title }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.titleCon}>
-        <h5>Skills</h5>
+        <h5>{title}</h5>
         {true && <span>*</span>}
       </div>
 
