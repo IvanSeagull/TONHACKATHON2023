@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import styles from './JobItem.module.scss';
 
@@ -15,8 +16,9 @@ const TagItem: React.FC<TagItemProps> = ({ tag }) => (
 );
 
 const JobItem = () => {
+  const navigation = useNavigate();
   return (
-    <div className={styles.wrapper}>
+    <div onClick={() => navigation('/jobs/123')} className={styles.wrapper}>
       <div className={styles.header}>
         <p className={styles.company}>
           <span>Microsoft</span>
