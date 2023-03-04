@@ -14,9 +14,10 @@ const Navbar = () => {
     <div className={styles.wrapper}>
       <div className="container">
         <div className={styles.content}>
-          <div className={styles.createBtn}>
+          <h3>Duck a job</h3>
+          {/* <div className={styles.createBtn}>
             <p>Create a job</p>
-          </div>
+          </div> */}
 
           <AccountButton />
           {/* <div className={styles.row}>

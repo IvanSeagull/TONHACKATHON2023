@@ -47,6 +47,10 @@ function AccountButton() {
               <Menu.Item>profile</Menu.Item>
             </Link>
 
+            <Link to="/create-job">
+              <Menu.Item>create a job</Menu.Item>
+            </Link>
+
             <Menu.Item>archive</Menu.Item>
 
             <Menu.Divider />
