@@ -27,6 +27,7 @@ function App() {
   console.log(wallet, connected);
   return (
     <>
+      <h1>12222</h1>
       <Navigator />
     </>
   );
