@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, useNavigation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useNavigation, HashRouter } from 'react-router-dom';
 import Navbar from './components/UI/Navbar';
 import CreateJob from './pages/CreateJob';
 import Job from './pages/Job';
@@ -10,8 +10,7 @@ import UserProfile from './pages/UserProfile';
 
 const Navigator = () => {
   return (
-    <BrowserRouter>
-      <h1>123</h1>
+    <HashRouter>
       {/* <Navbar /> */}
       <Routes>
         <Route path="/jobs" element={<JobLists />} />
@@ -23,7 +22,7 @@ const Navigator = () => {
 
         <Route path="/" element={<Landing />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
