@@ -11,6 +11,7 @@ import UserProfile from './pages/UserProfile';
 const Navigator = () => {
   return (
     <BrowserRouter>
+      <h1>123</h1>
       {/* <Navbar /> */}
       <Routes>
         <Route path="/jobs" element={<JobLists />} />
