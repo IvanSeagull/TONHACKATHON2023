@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, useNavigation, HashRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useNavigation } from 'react-router-dom';
 import Navbar from './components/UI/Navbar';
 import CreateJob from './pages/CreateJob';
 import Job from './pages/Job';
@@ -9,20 +9,20 @@ import Registration from './pages/Registration';
 import UserProfile from './pages/UserProfile';
 
 const Navigator = () => {
+  const path = 'TONHACKATHON2023';
   return (
-    <HashRouter>
-      {/* <Navbar /> */}
+    <BrowserRouter>
       <Routes>
-        <Route path="/jobs" element={<JobLists />} />
-        <Route path="/jobs/:id" element={<Job />} />
+        <Route path={`/${path}/jobs`} element={<JobLists />} />
+        <Route path={`/${path}/jobs/:id`} element={<Job />} />
 
-        <Route path="/profile" element={<UserProfile />} />
-        <Route path="/create-job" element={<CreateJob />} />
-        <Route path="/register" element={<Registration />} />
+        <Route path={`/${path}/profile`} element={<UserProfile />} />
+        <Route path={`/${path}/create-job`} element={<CreateJob />} />
+        <Route path={`/${path}/register`} element={<Registration />} />
 
-        <Route path="/" element={<Landing />} />
+        <Route path={`/${path}`} element={<Landing />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
