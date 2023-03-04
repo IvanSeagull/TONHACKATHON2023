@@ -1,18 +1,13 @@
 .wrapper {
-  min-height: 100vh;
-
-  .content {
-    padding: 20px 0;
-  }
-}
-
-.wrapperItem {
   width: 100%;
   border: 1px solid #eaeaea;
   border-radius: 12px;
-  padding: 22px;
+  //   height: 270px;
+  padding: 22px 0;
 
   .header {
+    padding: 0 22px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,6 +15,9 @@
     .company {
       color: #8a8a8a;
       font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
       span {
         text-decoration: underline;
       }
@@ -38,6 +36,8 @@
   }
 
   .body {
+    padding: 0 22px;
+
     .title {
       font-size: 18px;
       font-weight: 600;
@@ -54,14 +54,24 @@
       font-size: 14px;
       color: #6a6a6a;
       margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      p {
+        padding-top: 2px;
+        margin-left: 4px;
+      }
     }
   }
+
   .tagsCon {
+    padding-left: 20px;
+    left: 0;
+    right: 0;
     display: flex;
-    gap: 5px;
     align-items: center;
-    flex-wrap: nowrap;
-    overflow-y: scroll;
+    // flex-wrap: wrap;
+    overflow-x: auto;
+    gap: 5px;
 
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
@@ -69,7 +79,28 @@
     &::-webkit-scrollbar {
       display: none;
     }
+
+    .tagWrapper {
+      color: #6a6a6a;
+      border: 1px solid #eaeaea;
+      background-color: #fbfbfb;
+      padding: 8px 16px;
+      border-radius: 48px;
+      white-space: nowrap;
+
+      &:last-of-type {
+        margin-right: 22px;
+      }
+    }
   }
+  //   .tagsCon {
+  //     display: flex;
+  //     gap: 5px;
+  //     align-items: center;
+  //     flex-wrap: nowrap;
+  //     overflow-y: scroll;
+
+  //   }
 }
 
 .line {

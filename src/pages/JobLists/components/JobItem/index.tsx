@@ -1,21 +1,32 @@
 import React from 'react';
-import SkillComponent from '../../SkillComponent';
 
-import styles from './JobList.module.scss';
+import styles from './JobItem.module.scss';
 
-const tags = ['Func', 'Very fun c', 'React', 'Nest.js'];
+const tags = ['Func', 'Very fun c', 'React', 'Nest.js', 'Typescript'];
 
-const JobListItem = () => {
+interface TagItemProps {
+  tag: string;
+}
+
+const TagItem: React.FC<TagItemProps> = ({ tag }) => (
+  <div className={styles.tagWrapper}>
+    <p>{tag}</p>
+  </div>
+);
+
+const JobItem = () => {
   return (
-    <div className={styles.wrapperItem}>
+    <div className={styles.wrapper}>
       <div className={styles.header}>
         <p className={styles.company}>
-          Job by <span>Microsoft</span> | 2hr ago
+          <span>Microsoft</span>
+          <img src="/icons/circle.svg" /> 2hr ago
         </p>
         <div className={styles.priceCon}>
           <p className={styles.priceTxt}>$100</p>
         </div>
       </div>
+
       <div className={styles.body}>
         <h3 className={styles.title}>Make a logo for Microsoft.</h3>
         <p className={styles.description}>
@@ -24,18 +35,18 @@ const JobListItem = () => {
         </p>
 
         <div className={styles.appliedCon}>
+          <img src="/icons/user-check.svg" />
           <p>14 Applied</p>
         </div>
+        <div className={styles.line} />
       </div>
-
-      {/* <div className={styles.line} />
       <div className={styles.tagsCon}>
         {tags.map((tag, index) => (
-          <SkillComponent key={index} value={tag} />
+          <TagItem tag={tag} key={index} />
         ))}
-      </div> */}
+      </div>
     </div>
   );
 };
 
-export default JobListItem;
+export default JobItem;

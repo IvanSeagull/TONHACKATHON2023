@@ -1,12 +1,22 @@
 import { TonConnectButton, useTonWallet } from '@tonconnect/ui-react';
-import React from 'react';
-import JobList from '../../components/UI/JobList';
+import Filters from './components/Filters';
+import JobItem from './components/JobItem';
+
+import styles from './JobLists.module.scss';
 
 const JobLists = () => {
-  //   const wallet = useTonWallet();
-
-  //   console.log(wallet);
-  return <JobList />;
+  return (
+    <div className="container">
+      <div className={styles.wrapper}>
+        <Filters />
+        <div className={styles.list}>
+          <JobItem />
+          <JobItem />
+          <JobItem />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default JobLists;
