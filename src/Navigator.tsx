@@ -9,7 +9,7 @@ import Registration from './pages/Registration';
 import UserProfile from './pages/UserProfile';
 
 const Navigator = () => {
-  const path = '';
+  const path = '/TONHACKATHON2023';
   return (
     <BrowserRouter>
       <Routes>
