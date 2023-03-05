@@ -9,7 +9,7 @@ import Registration from './pages/Registration';
 import UserProfile from './pages/UserProfile';
 
 const Navigator = () => {
-  const path = '/TONHACKATHON2023';
+  const path = 'TONHACKATHON2023';
   return (
     <BrowserRouter>
       <Routes>
@@ -20,7 +20,7 @@ const Navigator = () => {
         <Route path={`${path}/create-job`} element={<CreateJob />} />
         <Route path={`${path}/register`} element={<Registration />} />
 
-        <Route path={`${path}/`} element={<Landing />} />
+        <Route path={`${path}/`} element={<JobLists />} />
       </Routes>
     </BrowserRouter>
   );
