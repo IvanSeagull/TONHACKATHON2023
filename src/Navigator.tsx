@@ -13,14 +13,14 @@ const Navigator = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={`${path}/jobs`} element={<JobLists />} />
-        <Route path={`${path}/jobs/:id`} element={<Job />} />
+        <Route path={`jobs`} element={<JobLists />} />
+        <Route path={`jobs/:id`} element={<Job />} />
 
-        <Route path={`${path}/profile`} element={<UserProfile />} />
-        <Route path={`${path}/create-job`} element={<CreateJob />} />
-        <Route path={`${path}/register`} element={<Registration />} />
+        <Route path={`profile`} element={<UserProfile />} />
+        <Route path={`create-job`} element={<CreateJob />} />
+        <Route path={`register`} element={<Registration />} />
 
-        <Route path={`${path}/`} element={<JobLists />} />
+        <Route path={``} element={<Landing />} />
       </Routes>
     </BrowserRouter>
   );

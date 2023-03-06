@@ -59,7 +59,7 @@ let githubUsername, githubRepo, botUsername;
 
   botUsername = getBot.data.result.username;
   const url = `https://${githubUsername}.github.io/${githubRepo}`;
-  const testUrl = 'https://ivanseagull.vercel.app';
+  const realUrl = 'https://duck-a-job.vercel.app/jobs';
 
   console.log(`\n\nSetting bot ${botUsername} webapp url to ${url}`);
 
@@ -69,7 +69,7 @@ let githubUsername, githubRepo, botUsername;
         type: 'web_app',
         text: 'Launch Webapp',
         web_app: {
-          url: url,
+          url: realUrl,
         },
       },
     })
